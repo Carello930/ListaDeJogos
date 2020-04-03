@@ -10,10 +10,11 @@ public class ModelListGames {
 
     }
 
-    public ModelListGames(int imageViewRight, int imageViewLeft){
+    //definir right************
+    public ModelListGames(int imageViewLeft){
 
         this.imageViewLeft = imageViewLeft;
-        this.imageViewRight = imageViewRight;
+        //this.imageViewRight = imageViewRight;
 
     }
 
@@ -25,11 +26,11 @@ public class ModelListGames {
         this.imageViewLeft = imageViewLeft;
     }
 
-    public int getImageViewRight() {
+    /*public int getImageViewRight() {
         return imageViewRight;
     }
 
     public void setImageViewRight(int imageViewRight) {
         this.imageViewRight = imageViewRight;
-    }
+    }*/
 }
