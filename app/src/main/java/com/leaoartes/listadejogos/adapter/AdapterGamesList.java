@@ -4,28 +4,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.leaoartes.listadejogos.R;
-import com.leaoartes.listadejogos.model.modelListGames;
-
-import org.w3c.dom.Text;
+import com.leaoartes.listadejogos.model.ModelListGames;
 
 import java.util.List;
 
 public class AdapterGamesList extends RecyclerView.Adapter<AdapterGamesList.MyViewHolder> {
 
-    private List<modelListGames> mDataset;
+    private List<ModelListGames> mDataset;
 
     //Criar novas views (Chamando LayoutManager)
     @NonNull
     @Override
     public AdapterGamesList.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_main, parent, false);
+                .inflate(R.layout.list_games_layout, parent, false);
 
         MyViewHolder vh = new MyViewHolder(itemView);
         return (vh);
@@ -33,7 +30,7 @@ public class AdapterGamesList extends RecyclerView.Adapter<AdapterGamesList.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        modelListGames modelList = mDataset.get(position);
+        ModelListGames modelList = mDataset.get(position);
 
         holder.imageViewLeft.setImageResource(modelList.getImageViewLeft());
         holder.imageViewRight.setImageResource(modelList.getImageViewRight());
@@ -55,7 +52,7 @@ public class AdapterGamesList extends RecyclerView.Adapter<AdapterGamesList.MyVi
         }
     }
 
-    public AdapterGamesList(List<modelListGames> myDataset){
+    public AdapterGamesList(List<ModelListGames> myDataset){
         mDataset = myDataset;
     }
 

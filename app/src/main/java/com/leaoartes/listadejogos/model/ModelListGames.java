@@ -2,15 +2,15 @@ package com.leaoartes.listadejogos.model;
 
 import android.widget.ImageView;
 
-public class modelListGames {
+public class ModelListGames {
 
     private int imageViewLeft, imageViewRight;
 
-    public modelListGames(){
+    public ModelListGames(){
 
     }
 
-    public modelListGames(int imageViewRight, int imageViewLeft){
+    public ModelListGames(int imageViewRight, int imageViewLeft){
 
         this.imageViewLeft = imageViewLeft;
         this.imageViewRight = imageViewRight;
