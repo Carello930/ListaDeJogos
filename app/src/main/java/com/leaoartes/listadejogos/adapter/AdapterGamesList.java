@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +44,7 @@ public class AdapterGamesList extends RecyclerView.Adapter<AdapterGamesList.MyVi
 
         holder.imageViewLeft.setImageResource(modelList.getImageViewLeft());
         //holder.imageViewRight.setImageResource(modelList.getImageViewRight());
+
 
         //ASyncTask para melhorar imagens
         if (holder.asyncTask != null){
@@ -84,15 +86,16 @@ public class AdapterGamesList extends RecyclerView.Adapter<AdapterGamesList.MyVi
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-     public ImageView imageViewLeft, imageViewRight;
+     public ImageView imageViewLeft;
+     public TextView textViewCardTitle, textViewCardDescription;
         public AsyncTask<Void, Void, Bitmap> asyncTask;
 
         public MyViewHolder(View itemView){
             super(itemView);
 
             imageViewLeft = itemView.findViewById(R.id.imageViewLeft);
-            //imageViewRight = itemView.findViewById(R.id.imageViewRight);
-
+            textViewCardTitle = itemView.findViewById(R.id.textViewCardTitle);
+            textViewCardDescription = itemView.findViewById(R.id.textViewCardDescription);
 
         }
     }
@@ -100,8 +103,5 @@ public class AdapterGamesList extends RecyclerView.Adapter<AdapterGamesList.MyVi
     public AdapterGamesList(List<ModelListGames> myDataset){
         mDataset = myDataset;
     }
-
-
-    //Criar uma nova View invocando o LayoutManager
 
 }

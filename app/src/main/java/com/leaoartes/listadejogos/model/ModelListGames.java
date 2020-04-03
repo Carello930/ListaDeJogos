@@ -1,20 +1,27 @@
 package com.leaoartes.listadejogos.model;
 
-import android.widget.ImageView;
+
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 
 public class ModelListGames {
 
-    private int imageViewLeft, imageViewRight;
+    private int imageViewLeft, imageViewFull;
+    private String textViewCardTitle, textViewCardDescription;
 
     public ModelListGames(){
 
     }
 
-    //definir right************
-    public ModelListGames(int imageViewLeft){
+
+    public ModelListGames(int imageViewLeft, int imageViewFull, String textViewCardTitle, String textViewCardDescription){
 
         this.imageViewLeft = imageViewLeft;
-        //this.imageViewRight = imageViewRight;
+        this.imageViewFull = imageViewFull;
+        this.textViewCardTitle = textViewCardTitle;
+        this.textViewCardDescription = textViewCardDescription;
 
     }
 
@@ -26,11 +33,27 @@ public class ModelListGames {
         this.imageViewLeft = imageViewLeft;
     }
 
-    /*public int getImageViewRight() {
-        return imageViewRight;
+    public int getImageViewFull() {
+        return imageViewFull;
     }
 
-    public void setImageViewRight(int imageViewRight) {
-        this.imageViewRight = imageViewRight;
-    }*/
+    public void setImageViewFull(int imageViewFull) {
+        this.imageViewFull = imageViewFull;
+    }
+
+    public String getTextViewCardTitle() {
+        return textViewCardTitle;
+    }
+
+    public void setTextViewCardTitle(String textViewCardTitle) {
+        this.textViewCardTitle = textViewCardTitle;
+    }
+
+    public String getTextViewCardDescription() {
+        return textViewCardDescription;
+    }
+
+    public void setTextViewCardDescription(String textViewCardDescription) {
+        this.textViewCardDescription = textViewCardDescription;
+    }
 }
